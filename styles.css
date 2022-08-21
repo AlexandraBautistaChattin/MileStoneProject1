@@ -9,18 +9,20 @@ h1 {
 }
 
 #board {
-    background-color: white;
-    border: 5px outset #05409e;
-    border-radius: 5px;
+    background-color: #f5e3d5;
+    border: 5px inset #2e1e11;
+    
     height: 600px;
-    width: 500px;
-    margin: 0 auto;
+    width: 580px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
 
 .card {
     height: 128px;
-    width: 98px;
+    width: 100px;
     margin: 2.5px;
+    border: 5px solid ;
+    border-radius: 10px;
 }
