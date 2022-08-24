@@ -102,4 +102,21 @@ function clickedCard() {
     }
 }
 
+var wins = 0;
 
+function reset() {
+    if (firstCard.src != secondCard.src) {
+        firstCard.src = "pokeball.png";
+        secondCard.src = "pokeball.png";
+        losses += 1;
+        document.getElementById("losses").innerText = losses;
+    } else {
+        (firstCard.src = secondCard.src); {
+            wins += 1;
+            document.getElementById("wins").innerText = wins;
+        }
+    }
+    
+    firstCard = null;
+    secondCard = null;
+}
