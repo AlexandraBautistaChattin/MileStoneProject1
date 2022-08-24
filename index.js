@@ -1,4 +1,5 @@
 var losses = 0;
+
 var cardList = [
     "bulbasaur",
     "charmander",
@@ -48,12 +49,15 @@ function startGame() {
         card.id = r.toString() + "-" + c.toString();
         card.src = cardImg + ".png";
         card.classList.add("card");
+        card.addEventListener("click", clickedCard);
         document.getElementById("board").append(card);
-        }
+        };
+        board.push(row);
+        console.log(board);
     }
-    board.push(row);
+
     }
-    console.log(board);
+   
     setTimeout(flipCards, 4000);
 
 
@@ -66,3 +70,36 @@ function flipCards() {
         }
     } 
 }
+
+let firstCard;
+let secondCard; 
+
+function clickedCard() {
+
+    if (this.src.includes("pokeball.png")) {
+        if (!firstCard) {
+            firstCard = this;
+
+            let coords = firstCard.id.split("-"); 
+            let r = parseInt(coords[0]);
+            let c = parseInt(coords[1]);
+            console.log(board);
+
+            firstCard.src = board[r][c] + ".png";
+        }
+        else if (!secondCard && this != firstCard) {
+            secondCard = this;
+
+            let coords = secondCard.id.split("-");
+            let r = parseInt(coords[0]);
+            let c = parseInt(coords[1]);
+
+            secondCard.src = board[r][c] + ".png";
+
+            setTimeout(reset, 2000);
+            
+        }
+    }
+}
+
+

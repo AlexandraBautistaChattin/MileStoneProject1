@@ -8,6 +8,10 @@ h1 {
     font-family: Helvetica;
 }
 
+h2 {
+    text-align: center;
+}
+
 #board {
     background-color: #f5e3d5;
     border: 5px inset #2e1e11;
@@ -17,6 +21,16 @@ h1 {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+}
+
+#wins {
+   
+
+}
+
+#losses {
+    
+
 }
 
 .card {
