@@ -58,7 +58,7 @@ function startGame() {
 
     }
    
-    setTimeout(flipCards, 4000);
+    setTimeout(flipCards, 9000);
 
 
 
@@ -96,7 +96,7 @@ function clickedCard() {
 
             secondCard.src = board[r][c] + ".png";
 
-            setTimeout(reset, 2000);
+            setTimeout(reset, 1000);
             
         }
     }
