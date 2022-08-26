@@ -1,3 +1,4 @@
+//establish var for the cards -- 
 var losses = 0;
 
 var cardList = [
@@ -17,10 +18,15 @@ var cardList = [
 var cardSet;
 var board = [];
 
+//once the window loads it'll shuffle the cards and start the game
+
 window.onload = function() {
     shuffleCards();
     startGame();
 }
+
+//code that shuffles the cards and brings the arrays together
+//loads two lists of the cards and shuffles both card lists
 
 function shuffleCards() {
     cardSet = cardList.concat(cardList);
